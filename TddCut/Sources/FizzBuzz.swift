@@ -9,6 +9,6 @@ import Foundation
 
 final class FizzBuzz {
     func next(_ value: Int) -> String {
-        ""
+        "1"
     }
 }
