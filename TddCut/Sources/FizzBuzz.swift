@@ -13,9 +13,17 @@ final class FizzBuzz {
         
         for i in 1..<value {
             if (i + 1) % 3 == 0 {
-                result += "\nFizz"
+                if (i + 1) % 5 == 0 {
+                    result += "\nFizzBuzz"
+                } else {
+                    result += "\nFizz"
+                }
             } else if (i + 1) % 5 == 0 {
-                result += "\nBuzz"
+                if (i + 1) % 3 == 0 {
+                    result += "\nFizzBuzz"
+                } else {
+                    result += "\nBuzz"
+                }
             } else {
                 result += "\n\(i + 1)"
             }

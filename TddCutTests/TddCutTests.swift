@@ -38,4 +38,9 @@ struct TddCutTests {
     func given_ten___return_one_two_fizz_four_buzz_fizz_seven_eight_fizz_buzz() {
         #expect(FizzBuzz().next(10) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz")
     }
+    
+    @Test
+    func given_fifteen___return_one_two_fizz_four_buzz_fizz_seven_eight_fizz_buzz_eleven_fizz_thirteen_fourteen_fizzbuzz() {
+        #expect(FizzBuzz().next(15) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz")
+    }
 }
