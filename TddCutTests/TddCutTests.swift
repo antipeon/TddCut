@@ -20,4 +20,12 @@ struct TddCutTests {
         #expect(result == "1")
     }
 
+    @Test
+    func given_two___return_one_two() {
+        let sut = FizzBuzz()
+        
+        let result = sut.next(2)
+        
+        #expect(result == "1\n2")
+    }
 }

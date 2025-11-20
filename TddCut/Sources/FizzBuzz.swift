@@ -9,6 +9,12 @@ import Foundation
 
 final class FizzBuzz {
     func next(_ value: Int) -> String {
-        "1"
+        var result = "1"
+        
+        for i in 1..<value {
+            result += "\n\(i + 1)"
+        }
+        
+        return result
     }
 }
