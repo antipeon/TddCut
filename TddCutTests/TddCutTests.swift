@@ -9,9 +9,15 @@ import Testing
 @testable import TddCut
 
 struct TddCutTests {
+    
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test
+    func given_one___return_one() {
+        let sut = FizzBuzz()
+        
+        let result = sut.next(1)
+        
+        #expect(result == "1")
     }
 
 }
