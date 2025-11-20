@@ -9,43 +9,17 @@ import Testing
 @testable import TddCut
 
 struct TddCutTests {
-    @Test
-    func given_one___return_one() {
-        #expect(FizzBuzz().next(1) == "1")
-    }
-
-    @Test
-    func given_two___return_one_two() {
-        #expect(FizzBuzz().next(2) == "1\n2")
-    }
-    
-    @Test
-    func given_three___return_one_two_fizz() {
-        #expect(FizzBuzz().next(3) == "1\n2\nFizz")
-    }
-    
-    @Test
-    func given_six___return_one_two_fizz() {
-        #expect(FizzBuzz().next(6) == "1\n2\nFizz\n4\nBuzz\nFizz")
-    }
-    
-    @Test
-    func given_five___return_one_two_fizz_four_buzz() {
-        #expect(FizzBuzz().next(5) == "1\n2\nFizz\n4\nBuzz")
-    }
-    
-    @Test
-    func given_ten___return_one_two_fizz_four_buzz_fizz_seven_eight_fizz_buzz() {
-        #expect(FizzBuzz().next(10) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz")
-    }
-    
-    @Test
-    func given_fifteen___return_one_two_fizz_four_buzz_fizz_seven_eight_fizz_buzz_eleven_fizz_thirteen_fourteen_fizzbuzz() {
-        #expect(FizzBuzz().next(15) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz")
-    }
-    
-    @Test
-    func given_30___return_30() {
-        #expect(FizzBuzz().next(30) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz")
+    @Test("FizzBuzz Test", arguments: [
+        (1, "1"),
+        (2, "1\n2"),
+        (3, "1\n2\nFizz"),
+        (6, "1\n2\nFizz\n4\nBuzz\nFizz"),
+        (5, "1\n2\nFizz\n4\nBuzz"),
+        (10, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz"),
+        (15, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz"),
+        (30, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz")
+    ])
+    func given_value___return_fizz_buzz_result(value: Int, expected: String) {
+        #expect(FizzBuzz().next(value) == expected)
     }
 }
