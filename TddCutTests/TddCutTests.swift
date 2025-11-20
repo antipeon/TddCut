@@ -26,6 +26,16 @@ struct TddCutTests {
     
     @Test
     func given_six___return_one_two_fizz() {
-        #expect(FizzBuzz().next(6) == "1\n2\nFizz\n4\n5\nFizz")
+        #expect(FizzBuzz().next(6) == "1\n2\nFizz\n4\nBuzz\nFizz")
+    }
+    
+    @Test
+    func given_five___return_one_two_fizz_four_buzz() {
+        #expect(FizzBuzz().next(5) == "1\n2\nFizz\n4\nBuzz")
+    }
+    
+    @Test
+    func given_ten___return_one_two_fizz_four_buzz_fizz_seven_eight_fizz_buzz() {
+        #expect(FizzBuzz().next(10) == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz")
     }
 }
