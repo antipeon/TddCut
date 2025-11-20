@@ -23,4 +23,9 @@ struct TddCutTests {
     func given_three___return_one_two_fizz() {
         #expect(FizzBuzz().next(3) == "1\n2\nFizz")
     }
+    
+    @Test
+    func given_six___return_one_two_fizz() {
+        #expect(FizzBuzz().next(6) == "1\n2\nFizz\n4\n5\nFizz")
+    }
 }
