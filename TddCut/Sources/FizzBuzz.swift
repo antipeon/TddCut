@@ -12,8 +12,6 @@ struct Division: OptionSet {
 
     static let three = Division(rawValue: 1 << 0)
     static let five = Division(rawValue: 1 << 1)
-    
-    static let all: Division = [.three, .five]
 }
 
 final class FizzBuzz {
@@ -30,14 +28,16 @@ final class FizzBuzz {
                 division.insert(.five)
             }
             
-            let next: String
-            if division.contains(.all) {
-                next = "FizzBuzz"
-            } else if division.contains(.three) {
-                next = "Fizz"
-            } else if division.contains(.five) {
-                next = "Buzz"
-            } else {
+            var next = ""
+            if division.contains(.three) {
+                next.append("Fizz")
+            }
+            
+            if division.contains(.five) {
+                next.append("Buzz")
+            }
+            
+            if division.isEmpty {
                 next = "\(i + 1)"
             }
             
