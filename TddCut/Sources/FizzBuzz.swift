@@ -12,7 +12,11 @@ final class FizzBuzz {
         var result = "1"
         
         for i in 1..<value {
-            result += "\n\(i + 1)"
+            if (i + 1) == 3 {
+                result += "\nFizz"
+            } else {
+                result += "\n\(i + 1)"
+            }
         }
         
         return result
